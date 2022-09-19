@@ -1,0 +1,42 @@
+.opening {
+    top: 16vh;
+    font-family: 'heebo';
+}
+
+.main-header {
+    position: absolute;
+    top: 16vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'heebo';
+    color: #252525;
+    font-size: 5vmax;
+    width: 90vw;
+    font-weight: 600;
+}
+
+.opening-txt {
+    direction: rtl;
+    position: absolute;
+    top: 27vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'heebo';
+    color: #343434;
+    font-size: 2.5vmax;
+    width: 90vw;
+    font-weight: 400;
+}
+
+.opening-txt2 {
+    direction: rtl;
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'heebo';
+    color: #252525;
+    font-size: 3vmax;
+    width: 90vw;
+    font-weight: 400;
+}

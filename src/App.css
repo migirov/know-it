@@ -1,5 +1,17 @@
+@font-face {
+  font-family: 'heebo';
+  src: url('./Heebo-VariableFont_wght.ttf');
+}
 .App {
   text-align: center;
+}
+
+html {
+  background-image: url('./media/background_gradient.svg');
+  height: 150vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .App-logo {
@@ -41,9 +53,9 @@
   display: flex;
   flex-direction: column;
   width: 92vw;
-  height: 150vh;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   justify-content: space-evenly;
+  margin-top: 12vh;
 }
