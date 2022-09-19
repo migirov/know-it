@@ -4,6 +4,7 @@ const PersonCard = (props) => {
         <div className="person-card">
             <img src={props.avatar} alt="avatar" className="avatar"/>
             <h1 className="name">{props.name}</h1>
+            <div className="job">{props.job}</div>
             <div className="avatar-description">{props.description}</div>
         </div>
     )

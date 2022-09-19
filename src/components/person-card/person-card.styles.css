@@ -4,33 +4,180 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    border: 1px solid #ccc;
     border-radius: 5px;
     width: 85vw;
     height: 40vh;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-size: 100% 100%;
+    margin: 1vw;
+    background-image: url('../../media/info_block.svg');
+}
+
+@media screen and (max-width: 600px) {
+    .person-card {
+        height: 20vh;
+        
+    }
+    .avatar {
+        width: 30vw;
+        height: 30vw;
+        left: 32%;
+    }
+    .name {
+        bottom: 80%;
+        right: 35vw;
+    }
+    .job {
+        bottom: 89%;
+        right: 35vw;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .person-card {
+        height: 25vh;
+        
+    }
+    .avatar {
+        width: 30vw;
+        height: 30vw;
+        left: 32%;
+    }
+    .name {
+        bottom: 18vh;
+        right: 35vw;
+    }
+    .job {
+        bottom: 82%;
+        right: 35vw;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .person-card {
+        height: 30vh;
+        
+    }
+    .avatar {
+        width: 32vw;
+        height: 32vw;
+        left: 28%;
+    }
+    .name {
+        bottom: 23vh;
+        right: 39vw;
+    }
+    .job {
+        bottom: 87%;
+        right: 39vw;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .person-card {
+        height: 35vh;
+        
+    }
+    .avatar {
+        width: 30vw;
+        height: 30vw;
+        left: 30%;
+    }
+    .name {
+        bottom: 25vh;
+        right: 34vw;
+    }
+    .job {
+        bottom: 85%;
+        right: 34vw;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .person-card {
+        height: 40vh;
+        
+    }
+    .avatar {
+        width: 25vw;
+        height: 25vw;
+        left: 32%;
+    }
+    .name {
+        bottom: 75%;
+        right: 31vw;
+    }
+    .job {
+        bottom: 85%;
+        right: 31vw;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .person-card {
+        height: 40vh;
+        
+    }
+    .avatar {
+        width: 20vw;
+        height: 20vw;
+        left: 32%;
+    }
+    .name {
+        bottom: 40vh;
+        right: 31vw;
+    }
+    .job {
+        bottom: 43vh;
+        right: 31vw;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .person-card {
+        height: 40vh;
+        
+    }
+    .avatar {
+        width: 18vw;
+        height: 18vw;
+        left: 37%;
+    }
+    .name {
+        bottom: 84%;
+        right: 27%;
+    }
+    .job {
+        bottom: 94%;
+        right: 27%;
+    }
 }
 
 .avatar {
     direction: rtl;
-    width: 20vw;
-    height: 20vw;
     border-radius: 100%;
     background-size: cover;
     position: relative;
-    left: 37%;
-    top: 0%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .name {
     direction: rtl;
     position: relative;
-    left: 60%;
-    transform: translateX(-50%);
-    bottom: 40vh;
     font-size: 5.5vmin;
     font-weight: 600;
+    font-family: 'heebo';
+    text-align: right;
+}
+
+.job {
+    position: relative;
+    font-size: 3.5vmin;
+    font-weight: 400;
+    font-family: 'heebo';
+    text-align: right;
+    color: rgb(36, 36, 36);
 }
