@@ -1,0 +1,7 @@
+.show-counter {
+    background-image: url("../../media/countdown.svg");
+    width: 80vw;
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

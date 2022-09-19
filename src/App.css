@@ -59,3 +59,14 @@ html {
   justify-content: space-evenly;
   margin-top: 12vh;
 }
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 16vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}

@@ -1,10 +1,16 @@
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import NavBar from './components/nav-bar/nav-bar.component';
 // import PersonCard from './components/person-card/person-card.component';
 import Opening from './components/opening/opening.component';
+import CountdownTimer from './components/countdown/CountdownTimer.component';
+import RegisterFormCard from './components/register-form/register-form-card.component';
 
 const App = () =>{
+  const NUM_DAYS_IN_MS = 57 * 24 * 60 * 60 * 1000;
+  const NOW_IN_MS = new Date().getTime();
+  const dateTimeAfterNumDays = NOW_IN_MS + NUM_DAYS_IN_MS;
+
   const People = [
     {
       name: 'אייל ברישניקוב',
@@ -36,7 +42,11 @@ const App = () =>{
     <div className="App">
     <div className="App-background"></div>
       <NavBar></NavBar>
-      <Opening></Opening>
+      <div className='main-page'>
+        <Opening></Opening>
+        <CountdownTimer targetDate={dateTimeAfterNumDays} />
+        <RegisterFormCard></RegisterFormCard>
+      </div>
       {/* <div className="card-list">
         {People.map((element) => {
           return (
