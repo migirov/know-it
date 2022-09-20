@@ -1,0 +1,11 @@
+.info-txt {
+    font-family: 'heebo';
+    color: #073147;
+    font-size: 8vmin;
+    width: 90vw;
+    font-weight: 1000;
+    position: absolute;
+    top: 16vh;
+    left: 50%;
+    transform: translateX(-50%);
+}

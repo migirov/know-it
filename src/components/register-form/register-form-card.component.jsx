@@ -28,52 +28,53 @@ const RegisterFormCard = (props) => {
     setPhone("");
   };
   return (
-    <div class="div-from">
+    <div className="div-form">
+    <div className="form-text">ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה באזרחות ובצבא.</div>
       <form>
-        <div class="mb-3">
-          <label for="exampleInputName" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputName" className="form-label">
             שם מלא
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
             שם החברה
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
             מייל
           </label>
           <input
             type="email"
-            class="form-control dir-ltr"
+            className="form-control dir-ltr"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword2" class="form-label">
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword2" className="form-label">
             טלפון
           </label>
           <input
             type="tel"
-            class="form-control dir-ltr"
+            className="form-control dir-ltr"
             id="exampleInputPassword1"
             maxLength="10"
             pattern="[0][5][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
@@ -81,13 +82,13 @@ const RegisterFormCard = (props) => {
             onChange={(e) => setPhone(e.target.value)}
           />
         </div>
-        <button type="submit" class="btn btn-primary" onClick={submit}>
+        <button type="submit" className="btn btn-primary" onClick={submit}>
           שלח
         </button>
       </form>
-      <label for="exampleInputPassword2" class="form-label">
+      <label htmlFor="exampleInputPassword2" className="form-label">
         בלחיצה על שלח אני מבינ/ה שאני נכנס/ת לרשימת המתנה ואין שום התחייבות
-        לרישום לאירוע
+        לרישום לאירוע.
       </label>
     </div>
   );

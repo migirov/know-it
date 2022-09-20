@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBar from './components/nav-bar/nav-bar.component';
 // import PersonCard from './components/person-card/person-card.component';
 import Opening from './components/opening/opening.component';
 import CountdownTimer from './components/countdown/CountdownTimer.component';
 import RegisterFormCard from './components/register-form/register-form-card.component';
+import BottomBanner from "./components/bottom-banner/bottomBanner.component";
+import Info from "./components/Info/Info.component";
 
 const App = () =>{
-  const NUM_DAYS_IN_MS = 57 * 24 * 60 * 60 * 1000;
-  const NOW_IN_MS = new Date().getTime();
-  const dateTimeAfterNumDays = NOW_IN_MS + NUM_DAYS_IN_MS;
+  // const NUM_DAYS_IN_MS = 57 * 24 * 60 * 60 * 1000;
+  // const NOW_IN_MS = new Date().getTime();
+  const event_date = new Date('2022-11-22T08:00:00');
+  const dateTimeAfterNumDays = event_date;
 
   const People = [
     {
@@ -40,13 +44,21 @@ const App = () =>{
 
   return (
     <div className="App">
-    <div className="App-background"></div>
       <NavBar></NavBar>
-      <div className='main-page'>
-        <Opening></Opening>
-        <CountdownTimer targetDate={dateTimeAfterNumDays} />
-        <RegisterFormCard></RegisterFormCard>
-      </div>
+      <BottomBanner></BottomBanner>
+      {
+        <Routes>
+          <Route path="*" element={<Opening targetDate={dateTimeAfterNumDays} />} />
+        {/* <Route path="/countdown" element={<CountdownTimer targetDate={dateTimeAfterNumDays} />} /> */}
+          <Route path="/register" element={<RegisterFormCard />} />
+          <Route path="/info" element={<Info />} />
+        </Routes>}
+        {/* <div className='main-page'> */}
+        {/* <Opening></Opening> */}
+        {/* <CountdownTimer targetDate={dateTimeAfterNumDays} /> */}
+        {/* <button className='start-form' onClick={startForm}></button> */}
+        {/* <RegisterFormCard></RegisterFormCard> */}
+      {/* </div> */}
       {/* <div className="card-list">
         {People.map((element) => {
           return (
@@ -63,3 +75,5 @@ const App = () =>{
 }
 
 export default App;
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<App />);

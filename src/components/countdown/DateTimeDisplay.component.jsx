@@ -1,9 +1,9 @@
 import React from 'react';
-import "./DateTimeDisplay.styles.css";
-const DateTimeDisplay = ({ value, type, isDanger }) => {
+
+const DateTimeDisplay = ({ value, id, isDanger }) => {
   return (
-    <div className={isDanger ? 'countdown danger' : 'countdown'}>
-      <p>{value}</p>
+    <div id={id} className={isDanger ? 'countdown danger' : 'countdown'}>
+      <p className='dateNum'>{value}</p>
     </div>
   );
 };

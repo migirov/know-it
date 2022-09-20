@@ -1,7 +1,43 @@
-.show-counter {
-    background-image: url("../../media/countdown.svg");
-    width: 80vw;
-    height: 35vh;
+
+.countdown-container {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.4fr 1.8fr 0.3fr 1.8fr 0.3fr 1.7fr 0.4fr 1.7fr 0.4fr;
+    grid-template-rows: 0.05fr 0.125fr 0.1fr;
+    margin: auto;
+    background-image: url("../../media/countdown.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    margin-top: 4vh;
+
+}
+
+.dateNum {
+    font-family: 'heebo';
+    color: rgb(0, 50, 73);
+    font-weight: 800;
+    font-size: 8vmin;
+}
+
+
+#days {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#hours {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+#minutes {
+    grid-column: 6/7;
+    grid-row: 2/3;
+}
+
+#seconds {
+    grid-column: 8/9;
+    grid-row: 2/3;
 }

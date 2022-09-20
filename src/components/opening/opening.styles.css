@@ -3,14 +3,17 @@
     font-family: 'heebo';
     display: flex;
     flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .main-header {
     font-family: 'heebo';
-    color: #252525;
+    color: #073147;
     font-size: 9vmin;
     width: 90vw;
-    font-weight: 600;
+    font-weight: 1000;
     margin-top: 1vh;
     margin-bottom: 0.5vh;
 }
@@ -18,7 +21,7 @@
 .opening-txt {
     direction: rtl;
     font-family: 'heebo';
-    color: #343434;
+    color: #1d2127;
     font-size: 4.5vmin;
     width: 90vw;
     font-weight: 400;
@@ -28,8 +31,26 @@
 .opening-txt2 {
     direction: rtl;
     font-family: 'heebo';
-    color: #101010;
-    font-size: 6vmin;
+    color: #142d3d;
+    font-size: 5vmin;
     width: 90vw;
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.register-btn {
+    font-family: 'heebo';
+    position: relative;
+    color: white;
+    font-size: 5vmin;
+    margin: auto;
+    margin-top: 4vh;
+    width: 50vw;
+    font-weight: 500;
+    background-color: #f18a36;
+    border: 0vmin solid white;
+    border-radius: 1vmin;
+    padding: 1vmin;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
