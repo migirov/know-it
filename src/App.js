@@ -42,38 +42,27 @@ const App = () =>{
     },
   ];
 
+  const DATA = [
+    {
+      "opening-txt": "אנו מתרגשים להזמינכם לכנס ה4 בנושא חדשנות בלמידה, כנס מיוחד וחוויתי שמחבר מגזרים שונים למכנה משותף - חדשנות בלמידה.",
+      "for-whom-txt": "800 מפתחי ומנהלי הדרכה מיחידות צה״ל, מגופי ביטחון נוספים, מהאקדמיה, מהתעשייה, ומהרשויות המקומיות. ",
+      "where-txt": "קריית ההדרכה - מחנה אריאל שרון.",
+      "when-txt": "הכנס יתקיים ביום שלישי ה-22 בנובמבר 2022 בין השעות 8:30-15:00.",
+      "plans": "2 הרצאות מליאה, מושבים, סדנאות, תערוכת ספקים, אוכל טוב, ומינגלינג עם חברי הצוות שלכם.",
+    }
+  ]
   return (
     <div className="App">
       <NavBar></NavBar>
       <BottomBanner></BottomBanner>
       {
         <Routes>
-          <Route path="*" element={<Opening targetDate={dateTimeAfterNumDays} />} />
-        {/* <Route path="/countdown" element={<CountdownTimer targetDate={dateTimeAfterNumDays} />} /> */}
+          <Route path="*" element={<Opening targetDate={dateTimeAfterNumDays}/>} />
           <Route path="/register" element={<RegisterFormCard />} />
-          <Route path="/info" element={<Info />} />
+          <Route path="/info" element={<Info OpeningTxt={DATA[0]["opening-txt"]} forWhomTxt={DATA[0]["for-whom-txt"]} whereTxt={DATA[0]["where-txt"]} whenTxt={DATA[0]["when-txt"]} plans={DATA[0]["plans"]}/>} />
         </Routes>}
-        {/* <div className='main-page'> */}
-        {/* <Opening></Opening> */}
-        {/* <CountdownTimer targetDate={dateTimeAfterNumDays} /> */}
-        {/* <button className='start-form' onClick={startForm}></button> */}
-        {/* <RegisterFormCard></RegisterFormCard> */}
-      {/* </div> */}
-      {/* <div className="card-list">
-        {People.map((element) => {
-          return (
-            <PersonCard 
-            name = {element.name}
-            job = {element.job}
-            description = {element.description}
-            avatar = {element.src}
-            />
-        )})}
-      </div> */}
     </div>
   );
 }
 
 export default App;
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<App />);

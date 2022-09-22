@@ -12,23 +12,22 @@
 }
 
 .icon {
-    background-size: 100% 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer;
-    width: 10vw;
-    height: 12vh;
+    width: 15vw;
+    object-fit: cover;
+    background-position: center center;
 }
 
 .info-icon{
-    background-image: url('../../media/odot_icon.svg');
+    background-image: url('../../media/odot.png');
 }
 
 .home-icon{
-    background-image: url('../../media/home_icon.svg');
+    background-image: url('../../media/home_icon.png');
 }
 
 .form-icon{
-    background-image: url('../../media/signup_icon.svg');
-    height: 8vh;
-    margin-top: 1vh;
+    background-image: url('../../media/signup_icon.png');
 }

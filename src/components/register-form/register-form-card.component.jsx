@@ -2,16 +2,22 @@ import { useState, useEffect } from "react";
 import "./register-form-card.styles.css";
 import database from "../../firebase/firebase";
 import { getFirestore, collection, query,doc, where, onSnapshot, setDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const db = getFirestore()
 
 const RegisterFormCard = (props) => {
 
+      const navigate = useNavigate();
+  
 
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("05");
+  const [id, setId] = useState("");
+  const [companyType, setCompanyType] = useState("");
+  const [role, setRole] = useState("");
 
   const submit = (e) => {
     e.preventDefault();
@@ -20,12 +26,19 @@ const RegisterFormCard = (props) => {
         name: name,
         company: company,
         email: email,
-        phone: phone
+        phone: phone,
+        id: id,
+        role: role,
+        companyType: companyType
     }, {merge: true});
     setName("");
     setCompany("");
     setEmail("");
     setPhone("");
+    setId('');
+    setCompanyType("");
+    setRole("");
+    navigate('/');
   };
   return (
     <div className="div-form">
@@ -44,20 +57,20 @@ const RegisterFormCard = (props) => {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="exampleInputPassword1" className="form-label">
-            שם החברה
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            ת.ז. (לצורך כניסה לבסיס)
           </label>
           <input
-            type="text"
-            className="form-control"
-            id="exampleInputPassword1"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
+            type="phone"
+            className="form-control dir-ltr"
+            value={id}
+            maxLength="9"
+            onChange={(e) => setId(e.target.value)}
           />
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-            מייל
+            מייל 
           </label>
           <input
             type="email"
@@ -80,6 +93,42 @@ const RegisterFormCard = (props) => {
             pattern="[0][5][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            ארגון
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="exampleInputPassword1"
+            value={company}
+            onChange={(e) => setCompany(e.target.value)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            תפקיד בארגון 
+          </label>
+          <input
+            type="text"
+            className="form-control dir-rtl"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            סוג ארגון (כוחות הבטחון, תעשייה, צה״ל, ממשלתי, מוסדות חינוך, מוסדות אקדמייה וכדומה).
+          </label>
+          <input
+            type="text"
+            className="form-control dir-rtl"
+            value={companyType}
+            onChange={(e) => setCompanyType(e.target.value)}
           />
         </div>
         <button type="submit" className="btn btn-primary" onClick={submit}>

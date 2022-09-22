@@ -1,11 +1,9 @@
 .nav-bar {
+    background: #f6f2ed;
     background-image: url('../../media/top_banner_thingy.svg');
+    background-position: center center;
     height: 14vh;
-    position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100vw;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
 }

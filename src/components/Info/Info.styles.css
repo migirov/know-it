@@ -1,4 +1,4 @@
-.info-txt {
+/* .info-txt {
     font-family: 'heebo';
     color: #073147;
     font-size: 8vmin;
@@ -8,4 +8,37 @@
     top: 16vh;
     left: 50%;
     transform: translateX(-50%);
+} */
+.Info {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    direction: rtl;
+    width: 90%;
+    margin: auto;
+    margin-top: 4vh;
+    font-family: 'heebo';
+    max-height: 70vh;
+    overflow: auto;
+}
+
+.title-info {
+    margin: auto;
+    color: #073147;
+    font-size: 5vmin;
+    font-weight: 500;
+    text-align: center;
+}
+
+.info-header {
+    font-family: 'heebo';
+    color: #073147;
+    font-size: 6vmin;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.info-body {
+    font-size: 4vmin;
+    color: #1d2127;
 }
