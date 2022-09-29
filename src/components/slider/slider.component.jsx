@@ -10,19 +10,19 @@ import image8 from '../../media/images_slider/img8.jpg';
 import image9 from '../../media/images_slider/img9.jpg';
 import image10 from '../../media/images_slider/img10.jpg';
 import image11 from '../../media/images_slider/img11.jpg';
-// import image12 from '../../media/images_slider/img12.jpg';
-// import image13 from '../../media/images_slider/img13.jpg';
-// import image14 from '../../media/images_slider/img14.JPG';
-// import image15 from '../../media/images_slider/img15.JPG';
-// import image16 from '../../media/images_slider/img16.JPG';
-// import image17 from '../../media/images_slider/img17.JPG';
-// import image18 from '../../media/images_slider/img18.JPG';
-// import image19 from '../../media/images_slider/img19.JPG';
-// import image20 from '../../media/images_slider/img20.JPG';
-// import image21 from '../../media/images_slider/img21.JPG';
-// import image22 from '../../media/images_slider/img22.JPG';
-// import image23 from '../../media/images_slider/img23.JPG';
-// import image24 from '../../media/images_slider/img24.JPG';
+import image12 from '../../media/images_slider/img12.jpg';
+import image13 from '../../media/images_slider/img13.jpg';
+import image14 from '../../media/images_slider/img14.jpg';
+import image15 from '../../media/images_slider/img15.jpg';
+import image16 from '../../media/images_slider/img16.jpg';
+import image17 from '../../media/images_slider/img17.jpg';
+import image18 from '../../media/images_slider/img18.jpg';
+import image19 from '../../media/images_slider/img19.jpg';
+import image20 from '../../media/images_slider/img20.jpg';
+import image21 from '../../media/images_slider/img21.jpg';
+import image22 from '../../media/images_slider/img22.jpg';
+import image23 from '../../media/images_slider/img23.jpg';
+import image24 from '../../media/images_slider/img24.jpg';
 import React from "react";
 import ImageGallery from 'react-image-gallery';
 const Slider = (props) => {
@@ -70,6 +70,58 @@ const Slider = (props) => {
         {
             original: image11,
             thumbnail: image11,
+        },
+        {
+            original: image12,
+            thumbnail: image12,
+        },
+        {
+            original: image13,
+            thumbnail: image13,
+        },
+        {
+            original: image14,
+            thumbnail: image14,
+        },
+        {
+            original: image15,
+            thumbnail: image15,
+        },
+        {
+            original: image16,
+            thumbnail: image16,
+        },
+        {
+            original: image17,
+            thumbnail: image17,
+        },
+        {
+            original: image18,
+            thumbnail: image18,
+        },
+        {
+            original: image19,
+            thumbnail: image19,
+        },
+        {
+            original: image20,
+            thumbnail: image20,
+        },
+        {
+            original: image21,
+            thumbnail: image21,
+        },
+        {
+            original: image22,
+            thumbnail: image22,
+        },
+        {
+            original: image23,
+            thumbnail: image23,
+        },
+        {
+            original: image24, 
+            thumbnail: image24,
         },
         ];
 
