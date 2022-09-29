@@ -1,8 +1,8 @@
 .nav-bar {
     background: #f6f2ed;
-    background-image: url('../../media/top_banner_thingy.svg');
+    background-image: url('../../media/top_banner_thing.svg');
     background-position: center center;
-    height: 14vh;
+    height: 11vh;
     top: 0;
     width: 100vw;
     background-repeat: no-repeat;

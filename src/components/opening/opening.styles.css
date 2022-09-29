@@ -1,17 +1,11 @@
 .opening {
-    top: 16vh;
-    font-family: 'heebo';
+    padding: 3vh 0;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    max-height: 72vh;
-    overflow: auto;
+    align-items: center;
 }
 
 .main-header {
-    font-family: 'heebo';
     color: #073147;
     font-size: 9vmin;
     width: 90vw;
@@ -22,7 +16,6 @@
 
 .opening-txt {
     direction: rtl;
-    font-family: 'heebo';
     color: #1d2127;
     font-size: 4.5vmin;
     width: 90vw;
@@ -32,7 +25,6 @@
 
 .opening-txt2 {
     direction: rtl;
-    font-family: 'heebo';
     color: #142d3d;
     font-size: 5vmin;
     width: 90vw;
@@ -40,7 +32,6 @@
 }
 
 .register-btn {
-    font-family: 'heebo';
     position: relative;
     color: white;
     font-size: 5vmin;
@@ -49,10 +40,10 @@
     width: 50vw;
     font-weight: 500;
     background-color: #f18a36;
-    border: 0vmin solid white;
+    border: none;
     border-radius: 1vmin;
     padding: 1vmin;
     text-align: center;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(153 81 25 / 18%) 0px 11px 16px 5px;
 }

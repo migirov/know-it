@@ -42,7 +42,7 @@ const RegisterFormCard = (props) => {
   };
   return (
     <div className="div-form">
-    <div className="form-text">ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה באזרחות ובצבא.</div>
+    <div className="form-text">ההרשמה מיועדת לאנשים העוסקים בפיתוח הדרכה באזרחות ובצבא, ולמנהלי הדרכה. </div>
       <form>
         <div className="mb-3">
           <label htmlFor="exampleInputName" className="form-label">
@@ -124,12 +124,21 @@ const RegisterFormCard = (props) => {
           <label htmlFor="exampleInputEmail1" className="form-label">
             סוג ארגון (כוחות הבטחון, תעשייה, צה״ל, ממשלתי, מוסדות חינוך, מוסדות אקדמייה וכדומה).
           </label>
-          <input
+          <select
+            placeholder="בחר סוג ארגון"
             type="text"
             className="form-control dir-rtl"
             value={companyType}
             onChange={(e) => setCompanyType(e.target.value)}
-          />
+          >
+            <option value="כוחות הבטחון">כוחות הבטחון</option>
+            <option value="תעשייה">תעשייה</option>
+            <option value="צה״ל">צה״ל</option>
+            <option value="ממשלתי">ממשלתי</option>
+            <option value="מוסדות חינוך">מוסדות חינוך</option>
+            <option value="מוסדות אקדמייה">מוסדות אקדמייה</option>
+            <option value="אחר">אחר</option>
+          </select>
         </div>
         <button type="submit" className="btn btn-primary" onClick={submit}>
           שלח

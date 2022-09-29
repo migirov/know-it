@@ -4,13 +4,10 @@
 
 .div-form {
     display: flex;
-    position: absolute;
-    top: 16vh;
+    margin: auto;
+    margin-top: 3vh;
     flex-direction: column;
-    font-family: 'heebo';
     width: 80vw;
-    left: 50%;
-    transform: translateX(-50%);
     padding: 2em;
     border-radius: 30px;
     direction: ltr;
@@ -70,7 +67,6 @@
 
 .btn-primary {
     font-size: 5vmin;
-    font-family: 'heebo';
     margin: auto;
     margin-top: 4vh;
     margin-bottom: 4vh;
