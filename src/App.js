@@ -35,7 +35,7 @@ const App = () =>{
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nunc. Donec auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nunc.',
     },
     {
-      name: 'רון קדוש',
+      name: 'רון הקדוש',
       job: 'Software Engineer',
       src: 'https://www.hrportal.co.il/wp-content/uploads/2019/03/%D7%97%D7%92%D7%99%D7%AA-%D7%90%D7%A4%D7%A8%D7%AA%D7%99.jpeg',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nunc. Donec auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nunc.',
