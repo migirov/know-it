@@ -8,8 +8,8 @@ const db = getFirestore()
 
 const RegisterFormCard = (props) => {
 
-      const navigate = useNavigate();
-  
+      const navigate = useNavigate(); 
+  const [showTxtField, setTxtField] = useState(false);
 
   const [name, setName] = useState("");
   const [company, setCompany] = useState("");
@@ -21,6 +21,7 @@ const RegisterFormCard = (props) => {
 
   const submit = (e) => {
     e.preventDefault();
+     if(email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) && name.length > 2 && company.length > 2 && companyType.length > 2 && role.length > 2 && phone.length === 10 && id.length === 9){
     const collectionRef = doc(db, 'users', phone);
     setDoc(collectionRef, {
         name: name,
@@ -39,6 +40,18 @@ const RegisterFormCard = (props) => {
     setCompanyType("");
     setRole("");
     navigate('/');
+  }
+  };
+
+  const onChangeCompanyType = (e) => {
+    if(e.target.value === 'אחר'){
+      setCompanyType("");
+      setTxtField(true);
+    }
+    else{
+      setTxtField(false);
+      setCompanyType(e.target.value);
+    }
   };
   return (
     <div className="div-form">
@@ -122,15 +135,16 @@ const RegisterFormCard = (props) => {
         </div>
         <div className="mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label">
-            סוג ארגון (כוחות הבטחון, תעשייה, צה״ל, ממשלתי, מוסדות חינוך, מוסדות אקדמייה וכדומה).
+            סוג ארגון
           </label>
           <select
             placeholder="בחר סוג ארגון"
             type="text"
-            className="form-control dir-rtl"
-            value={companyType}
-            onChange={(e) => setCompanyType(e.target.value)}
-          >
+            className="form-control form-select"
+            value={showTxtField ? "אחר" :companyType}
+            onChange={(e) => onChangeCompanyType(e)}
+          > 
+            <option value="">בחר</option>
             <option value="כוחות הבטחון">כוחות הבטחון</option>
             <option value="תעשייה">תעשייה</option>
             <option value="צה״ל">צה״ל</option>
@@ -139,7 +153,15 @@ const RegisterFormCard = (props) => {
             <option value="מוסדות אקדמייה">מוסדות אקדמייה</option>
             <option value="אחר">אחר</option>
           </select>
+          {showTxtField ? <input
+            type="text"
+            className="form-control extra-input"
+            id="exampleInputPassword1"
+            value={companyType}
+            onChange={(e) => setCompanyType(e.target.value)}
+          /> : null}
         </div>
+        
         <button type="submit" className="btn btn-primary" onClick={submit}>
           שלח
         </button>
