@@ -1,5 +1,6 @@
 import "./Info.styles.css"
 import React from 'react';
+import Email from "../email/email";
 
 const Info = (props) => {
 
@@ -15,6 +16,7 @@ const Info = (props) => {
             <div className="info-body">{props.whenTxt}</div>
             <h4 className="info-header">מה בתוכנית?</h4>
             <div className="info-body">{props.plans}</div>
+            <Email></Email>
         </div>
         
     )

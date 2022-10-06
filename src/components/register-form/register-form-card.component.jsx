@@ -3,6 +3,7 @@ import "./register-form-card.styles.css";
 import database from "../../firebase/firebase";
 import { getFirestore, collection, query,doc, where, onSnapshot, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import Email from "../email/email";
 
 const db = getFirestore()
 
@@ -170,6 +171,7 @@ const RegisterFormCard = (props) => {
         בלחיצה על שלח אני מבינ/ה שאני נכנס/ת לרשימת המתנה ואין שום התחייבות
         לרישום לאירוע.
       </label>
+      <Email></Email>
     </div>
   );
 };
